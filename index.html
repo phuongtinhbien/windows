@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    
+    .bg{height:100%;
+        width:100%;
+        padding-bottom: 50px;
+        justify-content: center;
+        
+        background-image:linear-gradient(to bottom,rgba(255, 255, 255, 0),  rgba(120,144,156,0.4), rgba(96,125,139,0.6),rgba(255, 255, 255, 1)), url('./index.jpg');
+        /*your background image*/  
+        /*we want to have one single image not a repeated one*/  
+    background-attachment: scroll;
+    
+       background-size: cover, cover;
+     background-position: center, right bottom;
+        background-repeat: no-repeat, no-repeat;
+        /*this sets the image to fullscreen covering the whole screen*/  
+        /*css hack for ie*/     
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./index.jpg",sizingMethod='scale');
+        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./index.jpg',sizingMethod='scale')";
+     }
+    
+
+     .shadow{
+         
+         box-shadow: 0px 5px 50px rgba(167, 163, 163, 0.404);
+        border-color: transparent;
+         border-radius: 25px;
+         
+     }
+     @font-face {
+    font-family: 'title'; /*a name to be used later*/
+    src: url('./font/iCiel Brush Up.ttf'); /*URL to font*/
+    font-weight: bolder;
+}
+@font-face {
+    font-family: 'span'; /*a name to be used later*/
+    src: url('./font/FS CherrySwash-Bold.otf'), url('FS CherrySwash-Regular.otf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'span-r'; /*a name to be used later*/
+    src: url('FS CherrySwash-Regular.otf'); /*URL to font*/
+}
+    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quản trị</title>
+</head>
+<body>
+<div class="bg">
+    
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark  navbar-static-top" role="navigation">
+                    <div class="container-fluid">
+                      <ul class="nav-left">
+                          <nav class="navbar navbar-light">
+                              <a class="navbar-brand" href="/home">
+                                <b class="display-4" style="font-size:32px;font-weight:bold">TRAVEL</b>
+                              </a>
+                            </nav>
+                      </ul>
+                      <ul class="nav-right">
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                  <a class="nav-link" href="/home"><b>Trang chủ</b><span class="sr-only">(current)</span></a>
+                                </li>
+                            
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="/thucPham" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    ĐI ĐÂU?
+                                  </a>
+                                  <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/thucPham/chatBeo">Chất béo</a>
+                                    <div class="dropdown-divider" style="margin-left:20px; margin-right:20px"></div>
+                                    <a class="dropdown-item" href="/thucPham/chatDam">Chất đạm</a>
+                                    <div class="dropdown-divider" style="margin-left:20px; margin-right:20px"></div>
+                                    <a class="dropdown-item" href="/thucPham/chatBotDuong">Chất bột đường</a>
+                                    <div class="dropdown-divider" style="margin-left:20px; margin-right:20px"></div>
+                                    <a class="dropdown-item" href="/thucPham/vitamin&kc">Vitamin & Khoáng chất</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/dinhDuong" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    CHƠI GÌ?
+                                    </a>
+                                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="/dinhDuong/vitamin">Vitamin</a>
+                                      <div class="dropdown-divider" style="margin-left:20px; margin-right:20px"></div>
+                                      <a class="dropdown-item" href="/dinhDuong/khoangChat">Khoáng chất</a>
+                                      <div class="dropdown-divider" style="margin-left:20px; margin-right:20px"></div>
+                                      <a class="dropdown-item" href="/dinhDuong/cck">Các chất khác</a>
+                                      
+                                      </div>
+                                    </li>
+            
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="/thongTinThem">Thông tin thêm<span class="sr-only">(current)</span></a>
+                                    </li>
+                            </ul>
+                             
+                        </div>
+                        </ul>
+                      
+                    </div>
+                    
+                </nav>
+    </div>
+    
+   
+    <div class="container">
+        <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 mt-5">
+                <div style="margin-top:10rem;">
+        <span class="display-2" style="color:white; font-family:title; font-stretch:expanded"> DU LỊCH<br> VIỆT NAM<br></span>
+            <span class="display-1" style="color:#00E676; font-weight:bold">_____</span>
+            </div>
+            
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 mt-5">
+                    <div class="card z-depth-5 " style="border-color:transparent; background-color:transparent; width: 25rem; border-radius:20px;margin-top:9rem;margin-left:18rem">
+                        <div class="card-body" >
+                            <div class="card-title ">
+                                <span class="display-4 text-center" style="font-family:span;color:white;font-size:35px"> Đi đâu đây nào?</span>
+                                <p class="text-muted" style="font-size:11px">Cứ nhập địa điểm. TRAVEL lo tất</p>
+                            </div>
+                            
+                                
+                                    <form method="post" action="/signin">
+                                        <div class="form-group">
+                                                <input type="text" class="form-control form-control-lg" style="background-color:white;border-width:10px;border-color:white;text-transform:uppercase; border-radius:10px; font-weight:bold" name="InputPlace" id="InputPlace" aria-describedby="emailHelp" placeholder="Nha Trang, Vũng Tàu">                    
+                                        </div>
+                                        <div class="text-center"><input type="submit" class="btn btn-outline-light btn-lg" value="ĐI THÔI" style="border-radius:10px"></input></div>
+                                    </form>
+                                
+                                
+        
+                        </div>
+        </div>
+                </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="container mb-5 mt-5">
+    <div class="d-flex justify-content-center">
+        <img src="./logo1.png">
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-5">
+                <div class="d-flex justify-content-center">
+                <div class="card" style=" padding:50px; height:10rem; width:10rem; border-radius:100%;border-color:black; border-width:2px">
+                        <i class="material-icons " style="font-size:60px; text-align:inherit;margin:auto;color:#00E676">local_airport</i>
+                </div>
+                
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                <span class="text-center" style=" width:auto;font-family:span;text-align:center;font-size:24px">phương tiện</span>
+                 </div>
+            </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-5">
+                <div class="d-flex justify-content-center">
+                <div class="card" style="background-color:black; padding:50px; height:10rem; width:10rem; border-radius:100%;border-color:black; border-width:2px">
+                        <i class="material-icons " style="font-size:60px; text-align:inherit;margin:auto;color:#00E676">local_dining</i>
+                </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                        <span class="text-center" style=" width:auto;font-family:span;text-align:center;font-size:24px">ăn uống</span>
+                         </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-5">
+                <div class="d-flex justify-content-center">
+                <div class="card" style=" padding:50px; height:10rem; width:10rem; border-radius:100%;border-color:black; border-width:2px">
+                        <i class="material-icons " style="font-size:60px; text-align:inherit;margin:auto;color:#00E676">terrain</i>
+                </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                        <span class="text-center" style=" width:auto;font-family:span;text-align:center;font-size:24px">phong cảnh</span>
+                         </div>
+        </div>
+    </div>
+    
+</div>
+<div class="dropdown-divider" style=" margin-top: 50px;margin-left:50px; margin-right:50px; margin-bottom:50px"></div>
+
+<div class="container mt-5">
+    
+        <div class="row" >
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 align-items-center" style="border-color: transparent" >
+                    <div class="mt-5">
+                        <div class="d-flex align-items-center">
+                                <span class=" p-2 display-4 text-center" style="font-family:span;font-size:36px"> Bạn thích đi đâu?</span><br>
+                            
+                        </div>
+                            <div class="d-flex align-items-center">
+                                <span  class=" p-2 text-center" style="font-family:span-r;font-size:24px"><i class="material-icons">center_focus_strong</i> Chọn nơi bạn muốn đến.
+                            </span>
+                               </div>
+                               <div class="d-flex align-items-center">
+                               <span  class=" p-2 text-center" style="font-family:span-r;font-size:24px">  <i class="material-icons">center_focus_strong</i> Chúng tôi tạo lịch trình cho bạn.</span>
+                            </div>      
+                        </div>
+                       
+    
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 align-items-center" >
+                <div class="card shadow" style="max-width:50rem;border: white 5px; border-radius: 25px;">
+                        <div id="carouselId" class="carousel slide" data-ride="carousel" style="border-radius:25px">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselId" data-slide-to="1"></li>
+                                <li data-target="#carouselId" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox" style="border-radius:25px">
+                                
+                                        <div class="carousel-item active" style="border-radius:25px">
+                                                
+                                                <img src="./index.jpg" width="100%" height="300px" style="border-radius:25px" alt="First slide">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h3 class="display-3" style="font-family: title">bắc<br> cổ kính</h3>
+                                                    <p>Description</p>
+                                                </div>
+                                            </div>
+                                        <div class="carousel-item" style="border-radius:25px">
+                                            
+                                                <img src="./pn2.jpg" width="100%" height="300px" style="border-radius:25px" alt="Second slide">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                        <h3 class="display-3" style="font-family: title">Trung nắng gió</h3>
+                                                        <p>Description</p>
+                                                </div>
+                                            </div>
+                                        <div class="carousel-item" style="border-radius:25px">
+                                            
+                                                <img src="./pn1.png" width="100%" height="300px" style="border-radius:25px" alt="Third slide">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                        <h3 class="display-3" style="font-family: title">Nam cuồng nhiệt</h3>
+                                                        <p>Description</p>
+                                                </div>
+                                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                    </div>
+                </div>
+            </div>
+       </div>
+      </div> 
+  
+
+<div class="container" style="margin-bottom:50px">
+        <h2 class="display-4 text-center" style="font-size: 36px; margin-bottom:20px;margin-top:20px">Nổi bật lắm chọn đi</h2>
+        <div class="card-deck">
+                <div class="card shadow">
+                  <img class="card-img-top" src="./index.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card shadow">
+                        <img class="card-img-top" src="./index.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                <div class="card shadow">
+                  <img class="card-img-top" src="./index.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card shadow">
+                  <img class="card-img-top" src="./index.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+    </div>
+    
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
